@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-color: skyblue;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.btn{
+  margin-left: 5px;
+}
+h4 {
+  color: white;
+}
+a {
+  color: #00B7FF;
+}
