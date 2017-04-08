@@ -9,9 +9,18 @@ var shortUrl = require('./models/shortUrl');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var app = express();
+var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 //connect to the database
-mongoose.connect(process.env.MONGODBLAB || 'mongodb://localhost:27017/shortUrls');
-
+if (env === 'development') {
+  mongoose.connect('mongodb://mbuckles:adjf1963@ds155820.mlab.com:55820/mbshorturl');
+} else {
+mongoose.connect('mongodb://mbuckles:adjf1963@ds155820.mlab.com:55820/mbshorturl');
+}
+//db.createCollection("sites", {
+//    capped: true,
+//    size: 5242880,
+//    max: 5000
+//  });
 //create  dbase entry
 app.get ('/new/:urlToShorten(*)', (req,res, next)=>{
 //ESS var urlToShorten = req.params.urlToShorten

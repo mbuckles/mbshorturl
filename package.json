@@ -6,7 +6,7 @@
     "node": "6.9.4",
     "npm": "3.10.10"
   },
- "scripts": {
+  "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "debug": "~2.6.3",
     "express": "^4.15.2",
     "jade": "~1.11.0",
+    "mongod": "^2.0.0",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.2",
     "morgan": "~1.8.1",
@@ -25,5 +26,13 @@
   "devDependencies": {},
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbuckles/mbshorturl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mbuckles/mbshorturl/issues"
+  },
+  "homepage": "https://github.com/mbuckles/mbshorturl#readme",
   "description": ""
 }
