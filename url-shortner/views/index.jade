@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  p.title Welcome to #{title}
+  h4 Technologies: Node, Express, MongoDB, Mongoose, JavaScript, Jade, CSS, Bootstrap
+  div(ng-controller="shortAppCtrl")
+    input(placeholder="Enter Url To Shorten" ng-model="urlToShorten")
+    button.btn.btn-primary(ng-href='/new/{{urlToShorten}}' title="urlToShorten") Get Shortened Url
