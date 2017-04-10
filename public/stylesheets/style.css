@@ -1,19 +1,35 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  text-align: center;
   background-color: skyblue;
+}
+div{
+  margin-left: 200px;
 }
 .title {
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
+}
+input{
+  margin-left: 200px;
 }
 .btn{
-  margin-left: 5px;
+  background-color: cream;
+  border-radius: 3px;
+}
+h2 {
+  color: white;
+  text-align: center;
+}
+h3 {
+  margin-left: 150px;
+}
+p.black, li{
+  margin-left: 150px;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 h4 {
-  color: white;
-}
-a {
-  color: #00B7FF;
+  margin-left: 200px;
 }

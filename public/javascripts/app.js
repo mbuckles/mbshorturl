@@ -1,4 +1,4 @@
-var app = angular.module('shortUrlApp', []);
+var app= angular.module('shortUrlApp', []);
 
-app.controller('shortAppCtrl', ($scope) =>{
+app.controller('shortAppCtrl', ($scope)=> {
 });

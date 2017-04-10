@@ -1,8 +1,29 @@
 extends layout
-
 block content
   p.title Welcome to #{title}
-  h4 Technologies: Node, Express, MongoDB, Mongoose, JavaScript, Jade, CSS, Bootstrap
-  div(ng-controller="shortAppCtrl")
-    input(placeholder="Enter Url To Shorten" ng-model="urlToShorten")
-    button.btn.btn-primary(ng-href='/new/{{urlToShorten}}' title="urlToShorten") Get Shortened Url
+  h2 Technologies: Node, Express, MongoDB, Mongoose, JavaScript, Jade, CSS, Bootstrap
+  br
+  p.black User Stories:
+  ul
+    li Begin with a standard format "www" website entry and then shorten it to a number between 0 and 100,000.
+    li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+    li If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+    li When I visit that shortened URL, it will redirect me to my original link.
+    br
+  h3 Example:
+  h4 Get Short Url:
+    code.
+      {
+         "original_url":"https://mbshorturl.herokuapp.com/new/www.facebook.com",
+         "short_url":"https://mbshorturl.herokuapp.com/3000"
+       }
+  br
+  h4 Get Original Url:
+    code.
+     {
+        "short_url":"https://mbshorturl.herokuapp.com/3000",
+        "original_url":"http://www.facebook.com"
+      }
+  br
+  h3 Instructions:
+  h4 In the address bar above, enter the site address that you want to shorten. To shorten www.facebook.com enter "https://mbshorturl.herokuapp.com/new/www.facebook.com". If you know the shortened url and want to go the original address, enter the address as follows: "https://mbshorturl.herokuapp.com/3000" where 3000 is the shortened url.
