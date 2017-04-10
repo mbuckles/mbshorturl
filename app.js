@@ -10,15 +10,11 @@ var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 app.use(bodyParser.json());
 app.use(cors());
-//app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 //connect to the database
 mongoose.connect('mongodb://mbuckles:adjf1963@ds155820.mlab.com:55820/mbshorturl');
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-//create  dbase entry
+
 app.get('/new/:urlToShorten(*)', (req,res, next)=>{
   var {urlToShorten} = req.params;
   //regex for url
@@ -62,6 +58,10 @@ app.get('/:urlToForward', (req,res,next) =>{
     }
   })
 });
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+//create  dbase entry
 module.exports = app;
 //app.listen(process.env.PORT || 3000);
 //app.configure('development', function () { app.locals.pretty = true; });
