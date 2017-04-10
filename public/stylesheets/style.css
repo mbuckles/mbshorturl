@@ -1,7 +1,6 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: skyblue;
 }
 div{
   margin-left: 200px;
@@ -13,10 +12,6 @@ div{
 }
 input{
   margin-left: 200px;
-}
-.btn{
-  background-color: cream;
-  border-radius: 3px;
 }
 h2 {
   color: white;
